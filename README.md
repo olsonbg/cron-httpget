@@ -8,6 +8,9 @@ My specific use case is for calling a `cron.php` resource for a
 instance running inside a [Kubernetes](https://kubernetes.io/ "Kubernetes
 Homepage") container.
 
+[![Build
+Status](https://travis-ci.com/olsonbg/cron-httpget.svg?branch=master)](https://travis-ci.com/olsonbg/cron-httpget)
+
 # About
 
 This is primarily intended to be used inside a container orchestration
