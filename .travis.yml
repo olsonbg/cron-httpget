@@ -3,6 +3,7 @@ sudo: false
 go:
   - "1.8"
   - "1.10.x"
+    env: FOR_DOCKER=true
   - master
 env:
   - CGO_ENABLED=0
@@ -12,6 +13,8 @@ before_deploy:
   - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
 deploy:
     provider: script
-    script: build-and-push.sh
+    skip_cleanup: true
+    script: ./build-and-push.sh
     on:
       tags: true
+      condition: $FOR_DOCKER = true
