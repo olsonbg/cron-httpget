@@ -8,3 +8,10 @@ env:
   - CGO_ENABLED=0
 script:
   - make
+before_deploy:
+  - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
+deploy:
+    provider: script
+    script: build-and-push.sh
+    on:
+      tags: true
