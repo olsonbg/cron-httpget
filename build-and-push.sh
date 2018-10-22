@@ -19,4 +19,10 @@ docker build \
 	--build-arg APPUSER_GID="$APPUSER_GID" \
 	"$GIT_ROOT"
 
+if [ $? -ne 0 ]; then
+	echo "Could not build image, aborting."
+	exit 1
+fi
+
 docker push olsonbg/cron-httpget:"$GIT_TAG"
+
