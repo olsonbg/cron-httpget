@@ -3,19 +3,15 @@ cron-httpget
 
 Periodically request data from a specified resource.
 
+[![Build Status](https://travis-ci.com/olsonbg/cron-httpget.svg?branch=master)](https://travis-ci.com/olsonbg/cron-httpget)
+[![](https://images.microbadger.com/badges/image/olsonbg/cron-httpget.svg)](https://microbadger.com/images/olsonbg/cron-httpget "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/olsonbg/cron-httpget.svg)](https://microbadger.com/images/olsonbg/cron-httpget "Get your own version badge on microbadger.com")
+
 My specific use case is for calling a `cron.php` resource for a
 [RedCAP](https://projectredcap.org "RedCAP Homepage")
 instance running inside a [Kubernetes](https://kubernetes.io/ "Kubernetes
 Homepage") container.
 
-
-### Build Status
-[![Build
-Status](https://travis-ci.com/olsonbg/cron-httpget.svg?branch=master)](https://travis-ci.com/olsonbg/cron-httpget)
-
-### Docker Image
-[![](https://images.microbadger.com/badges/image/olsonbg/cron-httpget.svg)](https://microbadger.com/images/olsonbg/cron-httpget "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/version/olsonbg/cron-httpget.svg)](https://microbadger.com/images/olsonbg/cron-httpget "Get your own version badge on microbadger.com")
 
 # About
 
@@ -25,6 +21,12 @@ variables](#environmental-variables). A [liveness
 probe](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) is also supported
 with the _/health_ path and the TCP network address define by
 [CRON_LISTEN](#cron_listen).
+
+# Docker Non-Root User
+
+By default, the docker container runs with a UID of 1002, and GID of 1003 (I
+semi-randomly picked those numbers), but should run find with any UID/GID
+combination.
 
 # Environmental Variables
 
