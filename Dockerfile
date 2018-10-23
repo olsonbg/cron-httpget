@@ -11,9 +11,9 @@ LABEL cron-httpget.git.branch=$GIT_BRANCH \
       cron-httpget.git.tag=$GIT_TAG \
       org.label-schema.name="cron-httpget" \
       org.label-schema.description="Periodically request data from a specified resource" \
-      org.label-schema.url="e.g. https://github.com/olsonbg/cron-httpget" \
+      org.label-schema.url="https://github.com/olsonbg/cron-httpget" \
       org.label-schema.vcs-ref=$GIT_COMMIT \
-      org.label-schema.vcs-url="e.g. https://github.com/olsonbg/cron-httpget"
+      org.label-schema.vcs-url="https://github.com/olsonbg/cron-httpget"
 
 RUN apk update \
     && apk upgrade \
