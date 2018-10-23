@@ -8,8 +8,14 @@ My specific use case is for calling a `cron.php` resource for a
 instance running inside a [Kubernetes](https://kubernetes.io/ "Kubernetes
 Homepage") container.
 
+
+### Build Status
 [![Build
 Status](https://travis-ci.com/olsonbg/cron-httpget.svg?branch=master)](https://travis-ci.com/olsonbg/cron-httpget)
+
+### Docker Image
+[![](https://images.microbadger.com/badges/image/olsonbg/cron-httpget.svg)](https://microbadger.com/images/olsonbg/cron-httpget "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/olsonbg/cron-httpget.svg)](https://microbadger.com/images/olsonbg/cron-httpget "Get your own version badge on microbadger.com")
 
 # About
 
