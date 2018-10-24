@@ -4,8 +4,10 @@ matrix:
   include:
     - go: "1.8"
     - go: "1.10.x"
-      env: FOR_DOCKER=true
-    - go: master
+      env:
+        - CGO_ENABLED=0
+        - FOR_DOCKER=true
+    - go: "1.11.x"
 env:
   - CGO_ENABLED=0
 script:
