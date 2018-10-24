@@ -10,7 +10,7 @@ Periodically request data from a specified resource.
 [![](https://images.microbadger.com/badges/license/olsonbg/cron-httpget.svg)](https://opensource.org/license/GPL-3.0 "View license on opensource.org")
 
 My specific use case is for calling a `cron.php` resource for a
-[RedCAP](https://projectredcap.org "RedCAP Homepage") instance running
+[REDCap](https://projectredcap.org "REDCap Homepage") instance running
 inside a [Kubernetes](https://kubernetes.io/ "Kubernetes Homepage")
 container. I've been running this for the past 40+ days with no problems,
 so I decided to clean it up and release this in the hopes that others would
