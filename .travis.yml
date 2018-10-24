@@ -1,15 +1,15 @@
 language: go
 sudo: false
+env:
+  global:
+    - CGO_ENABLED=0
 matrix:
   include:
     - go: "1.8"
     - go: "1.10.x"
       env:
-        - CGO_ENABLED=0
         - FOR_DOCKER=true
     - go: "1.11.x"
-env:
-  - CGO_ENABLED=0
 script:
   - make
 before_deploy:
