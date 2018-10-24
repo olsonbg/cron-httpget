@@ -7,6 +7,7 @@ Periodically request data from a specified resource.
 [![](https://images.microbadger.com/badges/image/olsonbg/cron-httpget.svg)](https://hub.docker.com/r/olsonbg/cron-httpget "View on Docker Hub")
 [![](https://images.microbadger.com/badges/version/olsonbg/cron-httpget.svg)](https://hub.docker.com/r/olsonbg/cron-httpget/tags "Show all tags on Docker hub")
 [![](https://images.microbadger.com/badges/commit/olsonbg/cron-httpget.svg)](https://microbadger.com/images/olsonbg/cron-httpget "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/license/olsonbg/cron-httpget.svg)](https://opensource.org/license/GPL-3.0 "View license on opensource.org")
 
 My specific use case is for calling a `cron.php` resource for a
 [RedCAP](https://projectredcap.org "RedCAP Homepage") instance running
