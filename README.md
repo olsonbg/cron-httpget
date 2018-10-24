@@ -11,9 +11,9 @@ Periodically request data from a specified resource.
 My specific use case is for calling a `cron.php` resource for a
 [RedCAP](https://projectredcap.org "RedCAP Homepage") instance running
 inside a [Kubernetes](https://kubernetes.io/ "Kubernetes Homepage")
-container. I've been running this for that past 40+ days with no problems,
+container. I've been running this for the past 40+ days with no problems,
 so I decided to clean it up and release this in the hopes that others would
-find in useful.
+find it useful.
 
 
 # About
@@ -33,14 +33,14 @@ make deploying easy.
 # Docker Non-Root User
 
 By default, the docker container runs with a UID of 1002, and GID of 1003 (I
-semi-randomly picked those numbers), but should run find with any UID/GID
+semi-randomly picked those numbers), but should run fine with any UID/GID
 combination.
 
 # Environmental Variables
 
 ## CRON_URL
 
-Required.
+_Required_.
 
 The URL to be periodically called. Example:
 
@@ -50,7 +50,7 @@ CRON_URL="http://www.example.com:80/cron.php"
 
 ## CRON_SCHEDULE
 
-Required.
+_Required_.
 
 CRON Expression that is accepted by
 <https://godoc.org/github.com/robfig/cron>. To have an HTTP
@@ -62,7 +62,7 @@ CRON_SCHEDULE="@every 1m"
 
 ## CRON_ACCEPT
 
-Optional.
+_Optional_.
 
 HTTP GET accept header sent to [CRON_URL](#cron_url), the default is:
 
@@ -78,7 +78,7 @@ CRON_ACCEPT="application/json"
 
 ## CRON_TIMEOUT
 
-Optional.
+_Optional_.
 
 HTTP GET timeout, in milliseconds. Default:
 
@@ -88,9 +88,9 @@ CRON_TIMEOUT="5000"
 
 ## CRON_LISTEN
 
-Required.
+_Required_.
 
-TCP network address to listen on for health check. The path is _/health_. To listen on localhost port 8000, use:
+TCP network address to listen on for health check. The path is `/health`. To listen on localhost port 8000, use:
 
 ```bash
 CRON_LISTEN="127.0.0.1:8000"
