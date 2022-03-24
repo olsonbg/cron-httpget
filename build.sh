@@ -16,7 +16,7 @@ docker run --rm \
 	-e GOOS=linux \
 	-e CGO_ENABLED=0 \
 	-e GOCACHE=/tmp \
-	golang:1.10 make
+	golang:1.17 make
 
 # Build the docker image
 docker build \
